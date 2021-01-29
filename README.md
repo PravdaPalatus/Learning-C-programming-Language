@@ -1,2 +1,3 @@
 # Learning-C-programming-Language
-In this repository are my codes developed during the studies I did to learn C.
+The codes presented in this repository were developed during the studies I carried out to learn C programming language.
+
