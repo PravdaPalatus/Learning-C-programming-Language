@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 int main() {
-    float a; //pergunta os valores dos lados
+    float a;
     float b;
     float c;
     printf("Valor do lado 1: \n");
@@ -22,7 +22,6 @@ int main() {
     } else {
         printf("Invalid side lengths for a triangle\n");
     }  
-    //calcula o perímetro
     printf("Temos os lados %0.1f %0.1f %0.2f e o perímetro %0.1f\n", a, b, c, peri);
     return 0;
 }
