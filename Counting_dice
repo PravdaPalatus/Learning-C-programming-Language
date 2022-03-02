@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+int main(){
+    srand(time(0));
+    int i, dice;
+    int count1, count2, count3, count4, count5, count6;
+    count1 = count2 = count3 = count4 = count5 = count6 = 0;
+    puts("Dice results:");
+    for(i=1; i <=100; i++){
+        dice = rand() % 6 + 1;
+        printf("%d ", dice);
+        switch(dice){
+            case 1: count1++; break;
+            case 2: count2++; break;
+            case 3: count3++; break;
+            case 4: count4++; break;
+            case 5: count5++; break;
+            case 6: count6++; break;
+        }
+    }
+    printf("\nCount 1's: %d\nCount 2's: %d\nCount 3's: %d\nCount 4's: %d\nCount 5's: %d\nCount 6's: %d", count1, count2, count3, count4, count5, count6);
+    printf("\n");
+    return 0;
+}
