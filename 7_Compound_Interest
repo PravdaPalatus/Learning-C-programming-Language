@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void){
+    unsigned int n;
+    // p original amount invested; r annual interest rate; n number of years; a amount at the end of the nth year 
+    float r, p, a;
+    p = 1000.00;
+    r = 0.05;
+
+    printf("%4s%15s\n", "YEAR", "Amount");
+
+    for(n = 1; n <= 10;n++){
+        a = p * pow((1 + r), n);
+        printf("%4u%15.2f\n", n, a);
+    }
+    printf("The final amount is: %0.2f\n", a);
+}
