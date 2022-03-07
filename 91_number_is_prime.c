@@ -1,4 +1,3 @@
-//is prime number?
 #include <stdio.h>
 #include <math.h>
 
@@ -11,14 +10,14 @@ int main(){
     
     int num;
 
-    printf("Digite um número:");
+    printf("Enter a number:");
     scanf("%d", &num);
 
-    if(num == 0 || num == 1) printf("Num não válido\n");
-    if(num == 2) printf("Num é Primo\n");
+    if(num == 0 || num == 1) printf("Invalid number\n");
+    if(num == 2) printf("This is not a prime number\n");
     else{
-        if(isPrime(num) == 1) printf("Num é Primo\n"); //aqui poderia ser: if(isPrime(num))
-        else printf("Num não é primo\n");
+        if(isPrime(num) == 1) printf("This is a prime number\n"); //if(isPrime(num))
+        else printf("This is not a prime number\n");
     }
 
     printPrime(1, 100);
@@ -30,7 +29,7 @@ int main(){
 
 int isPrime(int num){
     int count;
-    for(count = 2; count < num; count++){ //num = 1000 n-2 >>>>998 interações, já com: sqrt(1000) = 31  31-2 >>> 29
+    for(count = 2; count < num; count++){ //sqrt(num) reduces the number of interactions
         int res = num % count;
         if(res == 0) break;
         if(count == num - 1) return 1;
