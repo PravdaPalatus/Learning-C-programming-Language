@@ -27,10 +27,10 @@ double sineTaylor(double x, int n, double* error){
     double acc = 0.0;
     int i;
     for(i = 0; i <= n; i++){
-        acc += ((i%2)? -1.0 : 1.0) * pow(x, 2.0*i + 1.0)/factorial(2.0*i + 1.0); // trocou o pow(-1, i) 
-    }                                                                               //pelo tenary operator
+        acc += ((i%2)? -1.0 : 1.0) * pow(x, 2.0*i + 1.0)/factorial(2.0*i + 1.0); // tenary operator
+    }
     
-    //nesse ponto do programa o valor de i é n + 1 por conta da condição do for, ou seja, temos o i para o erro
+    //i = n + 1
 
     *error = pow(fabs(x), 2.0*i + 1.0)/factorial(2.0*i + 1.0);
 
