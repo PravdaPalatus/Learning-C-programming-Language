@@ -4,7 +4,7 @@
 #include <time.h>
 
 int rollADie(void);
-void countFrequencies(int);
+void countResults(int);
 
 int main(void){
 
@@ -15,15 +15,15 @@ int main(void){
     printf("How many dice do we roll?");
     scanf("%d", &numberOfRolls);
 
-    countFrequencies(numberOfRolls);
+    countResults(numberOfRolls);
 
     return 0;
 }
 
-void countFrequencies(int numberOfRolls){   
+void countResults(int numberOfRolls){   
     int face;
-    int freq1, freq2, freq3, freq4, freq5, freq6;
-    freq1 = freq2 = freq3 = freq4 = freq5 = freq6 = 0;
+    int res1, res2, res3, res4, res5, res6;
+    res1 = res2 = res3 = res4 = res5 = res6 = 0;
 
     for(int i = 0; i < numberOfRolls; ++i){
         face = rollADie();
@@ -31,32 +31,32 @@ void countFrequencies(int numberOfRolls){
         switch (face){
             case 1:
             //count #face 1
-                freq1++;
+                res1++;
             break;
             case 2:
-                freq2++;
+                res2++;
             break;
             case 3:
-                freq3++;
+                res3++;
             break;
             case 4:
-                freq4++;
+                res4++;
             break;
             case 5:
-                freq5++;
+                res5++;
             break;
             case 6:
-                freq6++;
+                res6++;
             break;
         }
     }
 
-    printf("Face1 came up %d #times\n", freq1);
-    printf("Face2 came up %d #times\n", freq2);
-    printf("Face3 came up %d #times\n", freq3);
-    printf("Face4 came up %d #times\n", freq4);
-    printf("Face5 came up %d #times\n", freq5);
-    printf("Face6 came up %d #times\n", freq6);
+    printf("Face1 came up %d #times\n", res1);
+    printf("Face2 came up %d #times\n", res2);
+    printf("Face3 came up %d #times\n", res3);
+    printf("Face4 came up %d #times\n", res4);
+    printf("Face5 came up %d #times\n", res5);
+    printf("Face6 came up %d #times\n", res6);
 
 }
 
