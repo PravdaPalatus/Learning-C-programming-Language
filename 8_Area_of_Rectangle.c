@@ -27,7 +27,7 @@ double distanceOf(double x1, double y1, double x2, double y2){
     double dist, h, w;
     h = y2 - y1;
     w = x2 - x1;
-    dist = sqrt(pow(h, 2)+ pow(w, 2));  //double d = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)); sendo d = dist
+    dist = sqrt(pow(h, 2)+ pow(w, 2));
     return dist;
 }
 
