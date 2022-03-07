@@ -1,6 +1,6 @@
 //area of triangle
 
-//aqui acho que chama header
+//header
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -16,8 +16,6 @@ int main(){
                                     
     printf("Digite as coordenadas x1 y1 x2 y2 x3 y3: ");
     scanf("%lf %lf %lf %lf %lf %lf", &x1, &y1, &x2, &y2, &x3, &y3);
-    //meu problema estava aqui. quando declaramos as variáveis com comma no scanf, temos que inserir com commas
-    //tirei as commas
     printf("%lf, %lf, %lf\n", distanceOf(x1, y1, x2, y2), distanceOf(x2, y2, x3, y3), distanceOf(x1, y1, x3, y3));
     printf("The area of triangle is: %lf\n", areaOfTriangle(x1, y1, x2, y2, x3, y3));
 
@@ -39,7 +37,7 @@ double areaOfTriangle(double x1, double y1, double x2, double y2, double x3, dou
     a = distanceOf(x1, y1, x2, y2);
     b = distanceOf(x2, y2, x3, y3);
     c = distanceOf(x1, y1, x3, y3);
-    //condição de existência do triangle
+    //the condition for the triangular structure to exist
     if(a >= b + c || b >= a + c || c >= b + a){
         printf("This is not a triangle!\n");
         exit(1);
