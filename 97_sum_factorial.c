@@ -1,4 +1,4 @@
-//sum of factorial
+//factorial and sum of factorial
 
 #include <stdio.h>
 
@@ -7,8 +7,8 @@ int sum_fac(int n);
 
 int main(){
 
-    printf("%d\n", fac(5));
-    printf("%d\n", sum_fac(5));
+    printf("%d\n", fac(5)); //factorial of 5
+    printf("%d\n", sum_fac(5)); // sum of factorial
 
     return 0;
 }
