@@ -1,4 +1,4 @@
-//oddNumbers
+//print all odd numbers within that range
 
 #include <stdio.h>
 
