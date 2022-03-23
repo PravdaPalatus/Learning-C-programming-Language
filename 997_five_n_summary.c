@@ -4,7 +4,7 @@
 #define MAX_ELEMENTS 100
 
 void get_elements(float *dataset, int size);
-void ordenar(float *dataset, int size);
+void order(float *dataset, int size);
 void break_array(float *dataset,float *upSet, float *downSet, int size);
 void five_summary(float *dataset, float *five, float *upSet, float *downSet, int size);
 
@@ -23,14 +23,14 @@ int main(){
     }
     printf("\n");
 
-    ordenar(dataset, size);
+    order(dataset, size);
     printf("We have the following sorted dataset: ");
     for(int i = 0; i < size; i++){
         printf("%.1f ", dataset[i]);
     }
     printf("\n");
 
-    five_summary(dataset, five, upSet, downSet, size); //se for o endereço dos parameters tem que enviar *name
+    five_summary(dataset, five, upSet, downSet, size);
     printf("We have the following five number summary: ");
     for(int i = 0; i < 5; i++){
         printf("%.1f ", five[i]);
@@ -48,7 +48,7 @@ void get_elements(float *dataset, int size){
     }
 }
 
-void ordenar(float *dataset, int size){
+void order(float *dataset, int size){
     for(int i = 0; i < size; i++){
         for(int y = 0; y < size; y++){
             if(dataset[i] < dataset[y]){
