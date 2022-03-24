@@ -1,21 +1,21 @@
 //finite state machine
-
+//********two ways to calculate*******
 #include <stdio.h>
 
 int count_doors(int * data, int size);
-int count_prof(char * sensor);
+int count_second(char * sensor);
 
 int main(){
-    int dados[] = {1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1};
-    char dados_string[] = "0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0";
+    int data[] = {1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1};
+    //char data_string[] = "0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0"; //***second way
 
-    long int size = sizeof(dados)/sizeof(dados[0]);
+    long int size = sizeof(dados)/sizeof(data[0]);
 
-    printf("Size of dados: %ld\n", size);
+    printf("Size of data: %ld\n", size);
     
-    printf("A porta fechou %d vezes.\n", count_doors(dados, size));
+    printf("The door closed %d times.\n", count_doors(data, size));
 
-    printf("Igor's solution: %d\n", count_prof(dados_string));
+    //printf("The door closed (Second solution): %d times\n", count_second(data_string));
 
     return 0;
 }
@@ -28,7 +28,7 @@ int count_doors(int * data, int size){
     return count;
 }
 
-int count_prof(char * sensor){ //essa é a verdadeira finite state machine
+/*int count_second(char * sensor){ //second and short way - finite state machine
     int state = 1; //close state
     int acc = 0;
     for(int i = 0; sensor[i]; i++){
@@ -40,4 +40,4 @@ int count_prof(char * sensor){ //essa é a verdadeira finite state machine
             state =1; //close state
     }
     return acc;
-}
+} */
