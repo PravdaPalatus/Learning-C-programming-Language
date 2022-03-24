@@ -1,11 +1,11 @@
 //comparing strings in a indice
 
-# include <stdio.h>
-#include <string.h> //strcmp(str1, str2) sting compare
+#include <stdio.h>
+#include <string.h> //strcmp(str1, str2) string compare (just to check)
 #include <stdlib.h>
 #define MAX 100
 
-void lower_case(char *str, int length); //professor deixou a diferença de tamanho entre a e A, ou seja, a > A
+void lower_case(char *str, int length); //We will not considere the differtent between lower and upper case
 int compare_str(char *str1, char *str2, int length);
 
 int main(){
@@ -24,11 +24,9 @@ int main(){
     printf("%s\n", second_msg); 
     
     int score = compare_str(first_msg, second_msg, length);
-    if(score == 0) printf("São idênticas\n");
+    if(score == 0) printf("They are the same.\n");
     else if(score == 1) printf("Second msg is greater (first)\n");
     else if(score == -1) printf("first msg is greater\n");
-
-    
 
     return 0;
 }
@@ -59,15 +57,11 @@ int compare_str(char *str1, char *str2, int length){
         }
     }
     
-    return 0; //identico
+    return 0; //same
 }
 
-//ABC
-//Abc is greater
-//abc is greater porque 'a' é maior que 'A'
-//ABC
 
-//professor
+//short version and considering upper and lower case
 //int my_cmp(char * str1, char * str2){
     //int i = 0;
     //while(str[i]){
