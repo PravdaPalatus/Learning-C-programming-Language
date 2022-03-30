@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#define MWORD 250
+
+int countVowals(char*);
+
+int main(){
+    char word[MWORD];
+    printf("Enter a word: ");
+    scanf("%s", word);
+
+    printf("The number of vowels in the word \"%s\" is: %d\n", word, countVowals(word));
+
+    return 0;
+}
+
+int countVowals(char* word){
+    int count = 0;
+    int size = strlen(word);
+    char vowels[] = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U', '\0'};
+    for(int i = 0; i < size;i++){
+        for(int j = 0; vowels[j]; j++){
+            if(word[i] == vowels[j]){
+                count++;
+                continue;
+            }
+        }
+    }
+
+
+    return count;
+}
