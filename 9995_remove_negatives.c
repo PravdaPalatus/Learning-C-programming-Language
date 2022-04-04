@@ -1,3 +1,4 @@
+//remove negative numbers from a arrayof integers
 #include <stdio.h>
 #define MMAX 250
 
