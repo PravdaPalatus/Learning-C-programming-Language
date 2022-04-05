@@ -1,3 +1,4 @@
+//Count the number of words within a message
 #include <stdio.h>
 #include <string.h>
 #define MMAX 1000
