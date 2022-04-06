@@ -1,3 +1,4 @@
+//program to input text in different paragraphs, prints out the entire text showing the number of lines entered and the number of words in the text
 #include <stdio.h>
 #include <string.h>
 #define MMAX 10000
