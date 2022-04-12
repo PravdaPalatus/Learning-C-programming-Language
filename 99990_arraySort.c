@@ -1,3 +1,4 @@
+//presenting a array in the ascending and descending sorted version
 #include <stdio.h>
 
 void buildArray(int* arr, int n);
