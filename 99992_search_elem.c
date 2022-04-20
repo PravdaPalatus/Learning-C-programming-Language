@@ -1,3 +1,4 @@
+//search a element in a array of integers
 #include <stdio.h>
 
 void printArr(int* arr, int num);
