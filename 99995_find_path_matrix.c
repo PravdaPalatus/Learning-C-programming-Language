@@ -4,7 +4,6 @@
 #define M 5
 
 void printMatrix(int arr[M][M]);
-//void printArr(int* arr, int lenght);
 int findRow(int arr[M][M], int number);
 int findCol(int arr[M][M], int number);
 void sortArray(int* arr, int* sortedArr, int lenght);
@@ -24,22 +23,9 @@ int main(){
     printf("We have the following matrix:\n");
     printMatrix(arr);
 
-    //int arr[M][M] = {{1,2,3,4,5},{10,9,8,7,6},{11,12,13,14,15},{20,19,18,17,16},{21,22,23,24,25}};
-
-    //printMatrix(arr);
-
-    //int row;
-    //row = findRow(arr, 5);
-    //printf("The row is: %d\n", row);
-//
-    //int col;
-    //col = findCol(arr, 5);
-    //printf("The column is: %d\n", col);
-
     printf("\n");
     int sortedArr[25];
     sortArray(*arr, sortedArr, 25);
-    //printArr(sortedArr, 25);
 
     int arrRows[25];
     int arrCols[25];
@@ -100,13 +86,6 @@ void sortArray(int* arr, int* sortedArr, int lenght){
         acc++;
     }
 }
-
-//void printArr(int* arr, int lenght){
-//    for(int i = 0; i < lenght; i++){
-//        printf("%d ", arr[i]);
-//    }
-//    printf("\n");
-//}
 
 int findPath(int arr[M][M], int* sortedArr, int* arrRows, int* arrCols){
     int nextnumber, rowIdx, colIdx, rowNext, colNext;
