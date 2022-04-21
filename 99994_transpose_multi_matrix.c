@@ -15,10 +15,6 @@ int main(){
     int arrt[M][N];
     int result[M][N] = {};
 
-    //int arr[M][N] = {{1, 2, 3, 4, 5}, {5, 4, 3, 2, 1}, {-1, 0, -1, 2, 3}, {9, -8, 7, 6, 5}, {1, 1, 1, 1, 1}};
-    //int arrt[M][N];
-    //int result[M][N] = {};
-
     for(int i = 0; i < M; i++){
         for(int j = 0; j < N; j++){
             printf("Enter the element (%d, %d):", i, j);
@@ -60,21 +56,6 @@ void transposeMatrix(int arr[M][N], int arrt[M][N]){
         }
     }
 }
-
-//void multiplyingMatrix(int *arr, int *arrt, int result[M][N], int lenght){
-//    int rowresult, colresult = 0;
-//    while(rowresult < 5){
-//        for(int i = 0; i < lenght;){
-//            for(int j = 0; j < N; j++){
-//                result[rowresult][colresult] = arr[i] * arrt[j] + arr[i + 1] * arrt[j + (1*N)] + arr[i + 2] * arrt[j + (2*N)] +  arr[i + 3] * arrt[j + (3*N)] +  arr[i + 4] * arrt[j + (4*N)];
-//                colresult++;
-//            }
-//            i = i + (N);
-//            rowresult++;
-//            colresult = 0;
-//        }
-//    }
-//}
 
 void multiplyingMatrix(int *arr, int *arrt, int result[M][N], int lenght){
     int rowresult, colresult = 0;
