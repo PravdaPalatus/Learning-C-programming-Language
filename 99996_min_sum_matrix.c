@@ -1,4 +1,4 @@
-// find the minimum sum of N elements of a matrix where each element should be in unique row and column
+// find the minimum sum of N elements of a matrix where each element should be in unique row and column (recursive way)
 #include <stdio.h>
 #define SIZE 5
 
@@ -25,8 +25,6 @@ int main(){
     printf("The square matrix:\n");
     print2DArr(arr);
 
-    //int arr[SIZE][SIZE] = {{5,4,4,1,6}, {1,3,2,4,6}, {3,2,3,2,6}, {0,4,5,4,6}, {6,6,6,6,6}};
-    print2DArr(arr);
     int rowsIdxAux[SIZE];
     for(int i = 0; i < SIZE ; i++) rowsIdxAux[SIZE] = -1;
     int colsIdxAux[SIZE];
@@ -39,7 +37,6 @@ int main(){
 
     printf("The minimun sum is: %d\n", globalSum);
     printPath(finalRowIdx, finalColIdx);
-    
 
     return 0;
 }
@@ -70,11 +67,11 @@ void minSum(int* arr, int* rowsIdxAux, int* colsIdxAux, int step, int* sum){
     }
 
     for(int rowIdx = 0; rowIdx < SIZE; rowIdx++){
-        if(existIdx(rowsIdxAux, rowIdx)) continue; //é o mesmo rowidx e colidx que estava antes durante o step?? Sim, é o mesmo anteiror.
+        if(existIdx(rowsIdxAux, rowIdx)) continue;
         for(int colIdx = 0; colIdx < SIZE; colIdx++){
             if(existIdx(colsIdxAux, colIdx)) continue;
             
-            rowsIdxAux[step] = rowIdx; // no retorno, nesse momento se muda do row e col usando um step maior (primeira mudança: step 4, row 3 col 4)
+            rowsIdxAux[step] = rowIdx;
             colsIdxAux[step] = colIdx;
 
             *sum += arr[rowIdx * SIZE + colIdx];
