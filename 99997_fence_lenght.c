@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
-//aqui podemos utilizar o typedef para economizar a ecrita do struct point no resto do programa
+//Here I can use typedef to simplify the code
 struct point{
     double x;
     double y;
