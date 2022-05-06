@@ -5,12 +5,9 @@ typedef struct Point3D{
     float x, y, z;
 } point3D;
 
-//point3D inicializePoint(float x, float y, float z);
 void scanPoints3D(point3D *p, int size);
 void printPoints3D(point3D p[], int size);
 void print3DPoint(point3D p);
-//point3D minPoint3D(float a, float b);
-//point3D maxPoint3D(float a, float b);
 point3D minBounding3DPoint(point3D p[], int size);
 point3D maxBounding3DPoint(point3D p[], int size);
 
@@ -33,14 +30,6 @@ int main(){
     return 0;
 }
 
-//point3D inicializePoint(float x, float y, float z){
-//    point3D p;
-//    p.x = x;
-//    p.y = y;
-//    p.z = z;
-//    return p;
-//}
-
 void scanPoints3D(point3D *p, int size){
     for(int i = 0; i < size; i++){
         printf("Enter coordinate of the point %d: ", i);
@@ -58,21 +47,6 @@ void printPoints3D(point3D p[], int size){
 void print3DPoint(point3D p){
     printf("(%g, %g, %g) ", p.x, p.y, p.z);
 }
-
-//point3D minPoint3D(float a, float b){
-//    float min;
-//    if(a<b) min = a;
-//    else min = b;
-//    return min;
-//
-//}
-
-//point3D maxPoint3D(float a, float b){
-//    float max;
-//    if(a>b) max = a;
-//    else max = b;
-//    return max;
-//}
 
 point3D minBounding3DPoint(point3D p[], int size){
     point3D minp = {p[0].x, p[0].y, p[0].z};
