@@ -24,11 +24,8 @@ int main(){
 
     if(isLeapYear(year)) days_month[2] += 1;
     numDaysMonth = days_month[month];
-    //printf("%d", numDaysMonth);
     int firstWeekDay;
     firstWeekDay = firstWeekDays(month, year);
-    //printf("%d", firstWeekDay);
-
     for(int i = 0; i < 51; i++) printf("=");
     printf("\n");
     printCalendar(month, year, numDaysMonth, firstWeekDay);
