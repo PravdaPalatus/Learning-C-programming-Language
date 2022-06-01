@@ -52,9 +52,6 @@ int main(){
     puts("Ascending (1) or Descending (2)?");
     scanf("%d", &order);
 
-    //book bookListTest[MAXN] = {{"Silmarillion", "J.R.R. Tolkien", 485, 14.99}, {"Harry Potter and the Prisoner of Azkaban", "J.K. Rowling", 480, 21.600},
-    //    {"Hitchhiker's Guide to the Galaxy", "Douglas Adams", 218, 7.99}, {"Neuromancer", "William Gibson", 321, 23.81}};
-
     if(strcmp(field, "title") == 0) byTitle(bookList, num, 0, order);
     else if(strcmp(field, "author") == 0) byAuthor(bookList, num, 0, order);
     else if(strcmp(field, "pages") == 0) byPages(bookList, num, 0, order);
