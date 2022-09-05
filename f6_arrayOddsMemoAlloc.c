@@ -1,3 +1,5 @@
+//memory allocation - basic
+
 #include <stdio.h>
 #include <stdlib.h>
 
