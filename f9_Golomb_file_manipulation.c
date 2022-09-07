@@ -1,3 +1,5 @@
+//manipulation of a text mode file which contains the Golomb sequence
+
 #include <stdio.h>
 #include <stdlib.h>
 
