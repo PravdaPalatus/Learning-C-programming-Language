@@ -1,4 +1,4 @@
-//entering information to the structure, capture data from the user and append it to the file, 
+//entering information to the structure, capture data from the user and append it to the file (binary mode, "world.dat"), 
 //Ask for the user the index of an entry, load it from the file and print out to the terminal
 
 #include <stdio.h>
@@ -22,8 +22,7 @@ void printData (Data country);
 int main(){
     long int entryTotal;
     int option;
-
-    //some dividing line
+    
     puts("********************************************************************");
 
     //finding the total number of countries in the file
@@ -54,7 +53,6 @@ long int fsize(char *filename){
     }
     return listSize;
 }
-
 
 void scan_data(Data * pd){
     puts("\nCountry:");
