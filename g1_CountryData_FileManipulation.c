@@ -37,6 +37,7 @@ int main(){
     puts("0 - Exit");
     scanf("%d%*c", &option);
     printOption(option, entryTotal);
+    if(option == 1) entryTotal = entryTotal + 1;
     } while(option > 0);
 
 
